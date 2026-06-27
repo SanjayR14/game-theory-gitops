@@ -1,8 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
+
 metadata:
   name: game-theory-backend
-  namespace: game-theory
+
 spec:
   replicas: 2
 
@@ -17,10 +18,8 @@ spec:
 
     spec:
       containers:
-      - name: game-theory-backend
-
-        image: sanjuhu/game-theory-backend:v1
-
+      - name: backend
+        image: 851218292096.dkr.ecr.ap-south-1.amazonaws.com/game-theory-backend:v1
         imagePullPolicy: Always
 
         ports:
